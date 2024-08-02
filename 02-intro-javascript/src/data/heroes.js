@@ -1,0 +1,47 @@
+
+
+
+
+const heroes = [
+    {
+        id: 1,
+        name: 'Batman',
+        owner: 'DC'
+    },
+    {
+        id: 2,
+        name: 'Spiderman',
+        owner: 'Marvel'
+    },
+    {
+        id: 3,
+        name: 'Superman',
+        owner: 'DC'
+    },
+    {
+        id: 4,
+        name: 'Flash',
+        owner: 'DC'
+    },
+    {
+        id: 5,
+        name: 'Wolverine',
+        owner: 'Marvel'
+    },
+];
+
+
+// Tipos de exportaciones/importaciones
+
+// exportación por defecto
+export default heroes;
+
+// exportación individual
+export const owners = ['DC', 'Marvel'];
+
+//Tambien se puede exportar un arreglo
+
+// export {
+//     heroes as default,
+//     owners
+// }
