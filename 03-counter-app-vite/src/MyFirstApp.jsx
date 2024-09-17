@@ -69,7 +69,7 @@ import { Fragment } from "react";
 import PropTypes from 'prop-types';
 
 // Props: En lugar de enviar props se envían los argurmentos desestructurados
-export const MyFirstApp = ( { title, subTitle} ) => {
+export const MyFirstApp = ( { title, subTitle, name} ) => {
 
     // if ( !title ) {
     //     throw new Error('title is required');
@@ -79,13 +79,24 @@ export const MyFirstApp = ( { title, subTitle} ) => {
             {/* <h1>Luis Lillo</h1> */}
             <h1>{ title }</h1>
             <p>{ subTitle }</p>
+            <p>{ name }</p>
         </>
        
     )    
 }
 
-// Para saber como funciona nuestro componente se definen los tipos de props y si son obligatorios
+// Para validar los datos de nuestro componente se definen los tipos de props y si son obligatorios
+// MyFirstApp.propTypes = {
+//     title: PropTypes.string.isRequired,
+//     subTitle: PropTypes.number
+// }
 MyFirstApp.propTypes = {
     title: PropTypes.string.isRequired,
-    subTitle: PropTypes.number
+    subTitle: PropTypes.string.isRequired,
+}
+
+MyFirstApp.defaultProps = {
+    title: 'No hay título',
+    subTitle: 'No hay subtítulo',
+    name: 'Luis Lillo',
 }
